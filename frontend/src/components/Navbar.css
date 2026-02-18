@@ -1,0 +1,161 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid rgba(0, 102, 204, 0.1);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  gap: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-symbol {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+[data-theme='dark'] .logo-symbol {
+  color: var(--text-primary);
+}
+
+.logo-text {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-primary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--accent-blue);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-green);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.resume-btn {
+  padding: 8px 20px;
+  background: var(--accent-blue);
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid var(--accent-blue);
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  background: transparent;
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.theme-toggle {
+  background: none;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 5px;
+}
+
+.theme-toggle:hover {
+  color: var(--accent-blue);
+  transform: rotate(20deg);
+}
+
+.menu-icon {
+  display: none;
+  background: none;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+  
+  .resume-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding: 2rem 0;
+    gap: 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-link:hover::after {
+    width: 0;
+  }
+
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+}

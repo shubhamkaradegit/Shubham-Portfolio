@@ -1,0 +1,146 @@
+.footer {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 4rem 0 2rem;
+  margin-top: 0;
+  border-top: 2px solid var(--accent-blue);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.footer-section a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-section a:hover {
+  color: var(--accent-green);
+  transform: translateX(5px);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-blue);
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: var(--accent-green);
+  transform: translateY(-5px) scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 102, 204, 0.2);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.heart-icon {
+  color: var(--accent-tomato);
+  animation: pulse 1.5s ease-in-out infinite;
+  margin: 0 0.3rem;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .footer-section h4 {
+    font-size: 1rem;
+  }
+
+  /* Quick Links and Contact Info in one row on mobile */
+  .footer-section:nth-child(2) ul,
+  .footer-section:nth-child(3) ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-section:nth-child(2) ul li,
+  .footer-section:nth-child(3) ul li {
+    flex: 0 0 auto;
+  }
+
+  /* Reduce social icon size on mobile */
+  .footer-social a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+}

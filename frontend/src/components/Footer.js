@@ -46,8 +46,8 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contact Info</h4>
             <ul>
-              <li><a href="mailto:shubham.karade@gmail.com">Email</a></li>
-              <li><a href="tel:+91xxxxxxxxxx">Phone</a></li>
+              <li><a href="mailto:shubhamkarade1196@gmail.com">Email</a></li>
+              <li><a href="tel:+917039304305">Phone</a></li>
               <li><a href="https://www.linkedin.com/in/shubhamkarade/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               <li><a href="https://github.com/shubhamkaradegit" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>

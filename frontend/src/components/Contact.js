@@ -145,7 +145,7 @@ const Contact = () => {
 
               <div className="contact-item">
                 <h4>📱 Phone</h4>
-                <p>+91-7039304305</p>
+                <a href="tel:+917039304305">+91-7039304305</a>
               </div>
 
               <div className="contact-item">

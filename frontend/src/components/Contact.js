@@ -59,7 +59,7 @@ const Contact = () => {
     try {
       // ✅ 1️⃣ Save to Backend (optional)
       try {
-        await fetch(`${process.env.REACT_APP_API_URL}/contacts`, {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/contacts`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

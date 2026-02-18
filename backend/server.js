@@ -25,8 +25,8 @@ const limiter = rateLimit({
 });
 
 const contactLimiter = rateLimit({
-  windowMs: 60 * 60 * 1000, // 1 hour
-  max: 5, // Limit each IP to 5 contact requests per hour
+  windowMs: 60 * 1000, // 1 hour
+  max: 100, // Limit each IP to 5 contact requests per hour
   message: 'Too many contact requests from this IP, please try again later.',
 });
 

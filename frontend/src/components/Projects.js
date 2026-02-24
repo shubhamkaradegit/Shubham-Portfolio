@@ -60,7 +60,7 @@ const Projects = () => {
       title: 'Todo App (React)',
       description: 'React application for task management with add, delete, and mark features.',
       technologies: ['React', 'JavaScript', 'CSS'],
-      image: '/project_img/todo-01-10-2026_10_29_PM.png',
+      image: '/project_img/todo.png',
       category: 'Minor',
       liveLink: 'https://karadetodo.netlify.app/',
       githubLink: 'https://github.com/shubhamkaradegit/Full-Stack-Web-Dev/tree/main/React/Todo'
